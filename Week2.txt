@@ -1,0 +1,97 @@
+dirll 5
+
+
+#include <vector>
+#include <string>
+#include <cstdlib>
+
+std::vector<int> create01(){
+    std::vector<int> myVector;
+//    vector <int> myVector;
+    return myVector;
+}
+std::string create02(){
+    return "";
+}
+double iter01(std::vector<double> nums){
+    int size = nums.size();
+    double tot = 0.0;
+    for(int i = 0; i <= size ; i++){
+        tot += nums[i];
+    }
+    return tot;
+}
+char iter02(std::string nums){
+    char min = 'e';
+    int mini = min;
+    int n = nums.size();
+    int compare;
+    // find smallest alphabet
+    for (int i=0; i < n; i++){
+        compare = nums[i];
+        if (compare < mini){
+             min = nums[i];
+            mini = compare;
+            }
+
+    }
+
+
+    // returning smallest alphabet
+    // if(min = '(') min ='$';
+    return min;
+}
+char smallest_alphabet(char a[], int n)
+{
+    // initializing smallest alphabet to 'z'
+    char min = 'Z';
+
+    // find smallest alphabet
+    for (int i=0; i<n-1; i++)
+        if (a[i] < min)
+            min = a[i];
+
+    // returning smallest alphabet
+    return min;
+}
+
+std::vector<double> write01(std::vector<double> nums, size_t index, double value){
+    if (index >= nums.size() ){
+      return nums;
+
+    }
+      nums[index] = value;
+      return nums;
+}
+std::vector<char> add01(std::vector<char> data, char value){
+    data.push_back(value);
+    return data;
+}
+std::string write02(std::string nums, size_t index, char value){
+    if (index >= nums.size() ){
+      return nums;
+
+    }
+
+    nums[index] = value;
+      return nums;
+}
+
+char read02(std::string str, size_t index){
+    if (index >= str.size()){
+      return '\n';
+    }else{
+         return str[index];
+    }
+}
+int read01(std::vector<int> nums, size_t index){
+    if (index >= nums.size()){
+      return -1;
+    }else{
+         return nums.at(index);
+    }
+    // for(int i =0; i <= nums.size(); i++){
+
+    // }
+
+}

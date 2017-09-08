@@ -1,0 +1,41 @@
+class Car {
+    Car();
+    Car(int k);
+   public:
+      double speed;   // Length of a box
+};
+Car::Car(){
+    speed = 0.0;
+}
+Car::Car(int k){
+    speed = k;
+}
+
+
+class Car {
+      public:
+    Car();
+    Car(int k);
+      double speed;   
+};
+Car::Car(){
+    speed = 0.0;
+}
+Car::Car(int k){
+    speed = k;
+}
+
+
+#ifndef _CAR_H_
+#define _CAR_H_
+#include "Car.h"
+
+
+Car::Car( ){
+     speed = 0.0;
+}
+Car::Car(int k){
+    speed = k;
+}
+
+#endif
